@@ -1,0 +1,95 @@
+<div ng-controller="CreateCtrl">
+	<div class = "col-sm-12 create">
+		<h1> Be a poet! </h1>
+
+		<div class="container">
+		    <p>
+		    	<span>is</span>
+		       	<span class="higher">this</span> 
+		       	<span>the</span> <span class="up">real</span> 
+		       	<span class="small">life</span>
+		       	<span class="punct">?</span>
+		      	<span class="leftabit">is</span> 
+		      	<span>this</span> 
+		      	<span>just</span> 
+		      	<span class="small downabit">fantasy</span>
+		      	<span class="punct">?</span>
+		      	<span class="rightabit">caught</span> 
+		      	<span class="higher">in</span> 
+		      	<span class="down">a</span>
+		      	<span class="small">land</span>
+		      	<span>slide</span>
+		      
+		      	<span>no</span>
+		      	<span>escape</span> 
+		      	<span class="up">from</span> 
+		      	<span class="downabit higher">reality</span>
+		      	<span class="lower leftabit">open</span> 
+		      	<span>your</span> 
+		      	<span class="small">eye</span>
+		      	<span class="punct upabit">s</span>
+		    	<span class="rightabit">look</span> 
+		      	<span>up</span> <span>to</span> 
+		      	<span class="lower">the</span> 
+		      	<span>skies</span> 
+		      	<span>and</span>
+		      	<span class="higher">see</span>
+		      	<span>I&rsquo;m</span> 
+		      	<span class="up">just</span> 
+		      	<span>a</span> 
+		      	<span>poor</span> 
+		      	<span class="small higher">boy</span>
+		      	<span class="punct">,</span>
+		      	<span>I</span> 
+		      	<span class="downabit">need</span> 
+		      	<span>no</span> 
+		      	<span>sympathy</span>    
+		      	<span class="up">because</span> 
+		      	<span>I&rsquo;m</span> 
+		      	<span>easy</span> 
+		      	<span class="small">come</span>
+		      	<span class="punct downabit">,</span>
+		      	<span>easy</span> 
+
+		      	<br>	
+
+		      	<span class="down">go</span>
+		      	<span>a</span> 
+		      	<span class="downabit">little</span> 
+		      	<span class="small">high</span>
+		      	<span class="punct">,</span>
+		      	<span>little</span> 
+		      	<span class="higher">low</span>
+		      	<span class="upabit leftabit">anyway</span> 
+		      	<span>the</span> 
+		      	<span class="lower">wind</span> 
+		      	<span class="small upabit">blows</span>
+		      	<span class="punct">,</span> 
+		      	<span class="small">doesn</span>
+		      	<span class="small punct downabit">&rsquo;</span>
+		      	<span class="punct lower">t</span> 
+		      	<span>really</span> 
+		      	<span>matter</span> 
+		      	<span>to</span> 
+		      	<span class="small up">me</span>
+		      	<span class="punct">,</span>
+		      
+		      <span class="down">to</span> 
+		      <span class="small">me</span>
+		      <span class="punct">.</span>
+		      <span class="small">~</span>
+		      <span class="small down">~</span> 
+		      <span class="up">Queen</span>
+		     </p>
+		  </div>
+
+		  <div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}" ng-hide="!list1.title">{{list1.title}}</div>
+
+		  <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style='height:50px;'>
+  			
+  		  <div class="btn btn-success" data-drag="false" data-jqyoui-options ng-model="list2" jqyoui-draggable ng-hide="!list2.title">{{list2.title}}</div>
+</div>
+
+	  	<canvas width="1000" height="600"></canvas>
+	</div>  	
+  </div>
