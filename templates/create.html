@@ -4,20 +4,22 @@
 		
 		<div class="container" >
 		    <p>		    	
-		       	<span ng-repeat = "word in list1" class="higher" data-drag="true" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable="{animate:true}" ng-hide="!word.title">{{word.title}}</span> 		       
+		       	<span ng-repeat = "word in list1" class="higher" data-drag="true" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable="{animate:true}" ng-hide="!word.title">{{word.title}}</span>
+
 		    	
 		  
 		    </p>
-			 
+		</div>
 
 		  
 		    
-			<canvas id = "canvas" width: "500" height: "150" data-drop="true" data-jqyoui-options jqyoui-droppable>
+		<div class = "thumbnail" data-drop="true" data-jqyoui-options ng-model = "list2" jqyoui-droppable>
 
-				  <p>
-				  <span ng-repeat = "word in list2" class="higher" data-drag="false" data-jqyoui-options ng-model="word" jqyoui-draggable ng-hide="!word.title">{{word.title}}</span>
-				  </p>
-			</canvas>
+			<p>
+				<span ng-repeat = "word in list2" class="higher" data-drag="false" data-jqyoui-options ng-model="word" jqyoui-draggable ng-hide="!word.title">{{word.title}}
+				</span>
+			</p>
+			
 		</div>
 
 		<button class="btn btn-primary" type="button" ng-click="save()" value="Save">Save</button>

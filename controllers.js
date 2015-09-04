@@ -11,38 +11,40 @@ angular.module('tagoreApp.controllers', ['tagoreApp.services', 'ui.bootstrap', '
 				
 	
 		$scope.list1 = [{title: 'AngularJS - Drag Me'},
-						{title: 'Drag me again'}
+						{title: 'Drag me again'},
+						{title: 'Do it'}
 						];
   		$scope.list2 = [{}];
-		
+  		$scope.poem = {};
+  		$scope.poems = PoemService.all()
+		var imageUrl;
 
 		$scope.save = function() {
   			console.log("Saving poem")  			
-				var canvas  = document.getElementById("canvas");
-				var dataUrl = canvas.toDataURL("image/png");
-				console.log(dataUrl)
+			var can = document.getElementsByClassName("thumbnail")
+			html2canvas(can, {
+  					onrendered: function(canvas) {
+    				imageUrl = canvas.toDataURL("image/png");
+    				document.body.appendChild(canvas);
+    				console.log(imageUrl)
+  						$scope.poem.poemId = $scope.poems.length;
+  						$scope.poem.image = imageUrl;
+  						$scope.poem.popularity = 0;
+  						$scope.poem.author = 'Manu';
+  						
+  						$scope.poems.push($scope.poem);
+    				
+    				}    				
+    		})
+    					// $scope.poem.date_created = new Date();
+  						  
 
-				window.open(dataUrl, "toDataURL() image", "width=600, height=200");
+  					
 			
-
-
-
-  			// html2canvas($(".thumbnail"), {
-     //        	onrendered: function(canvas) {
-     //            theCanvas = canvas;
-     //            document.body.appendChild(canvas);
-
-     //            // Convert and download as image 
-     //            // Canvas2Image.saveAsPNG(canvas); 
-     //            // $("#img-out").append(canvas);
-     //            // Clean up 
-     //            //document.body.removeChild(canvas);
-     //        	}
-     //    	})
-    	}
-
-
-  				
+			
+		}
+			
+			 				
 
 	}])
 	;
