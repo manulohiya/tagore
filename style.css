@@ -1,7 +1,7 @@
 body {
 	padding-top: 50px;
   -webkit-text-size-adjust: none;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.9;
   font-family: serif;
 
@@ -109,12 +109,19 @@ p span {
 
 /* Canvas */
 canvas {
-/*	width: 100%;
-	height: 600px; */
+	/*width: 100%;*/
+	/*height: 300px!important; */
+	/*width: 500px!important;*/
 	
 	background-image: url('/bluetexture.png'); 
-	display: block;
+	  display: block;
     margin: 0 auto;
 
+}
+
+button {
+	display: block;
+    margin: 0 auto;
+	text-align: center;
 }
 

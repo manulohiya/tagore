@@ -1,4 +1,4 @@
-angular.module('tagoreApp.services', ['ui.bootstrap'])
+angular.module('tagoreApp.services', ['ui.bootstrap', 'ngDragDrop'])
 
 .service('PoemService', function() {
   // Might use a resource here that returns a JSON array

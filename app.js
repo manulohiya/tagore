@@ -1,4 +1,4 @@
-angular.module('tagoreApp', ['ngRoute', 'tagoreApp.controllers', 'ui.bootstrap'])
+angular.module('tagoreApp', ['ngRoute', 'tagoreApp.controllers', 'ui.bootstrap', 'ngDragDrop'])
 
 .config(['$routeProvider',
    function ($routeProvider) {
