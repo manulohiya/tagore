@@ -28,6 +28,7 @@ angular.module('tagoreApp.controllers', ['tagoreApp.services', 'ui.bootstrap', '
     				document.body.appendChild(canvas);
     				console.log(imageUrl)
   						$scope.poem.poemId = $scope.poems.length;
+  						$scope.poem.date_created = new Date();
   						$scope.poem.image = imageUrl;
   						$scope.poem.popularity = 0;
   						$scope.poem.author = 'Manu';
