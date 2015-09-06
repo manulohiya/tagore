@@ -26,26 +26,26 @@ angular.module('tagoreApp.controllers', ['tagoreApp.services', 'tagoreApp.direct
 			return $scope.list1
 		}
 
-		$scope.randomClass = function() {
-			console.log("random class works")
-			var classes = [
-			"up", "upabit", "down", "downabit", "higher", "lower", "leftabit", "rightabit"]; 
-			function getRandom(arr, n) {
-		    	var result = new Array(n),		    
-		    	    len = arr.length,		
-		    	    taken = new Array(len);
-		    		if (n > len)
-		        		throw new RangeError("getRandom: more elements taken than available");
-		    		while (n--) {
-		        		var x = Math.floor(Math.random() * len);
-		        		result[n] = arr[x in taken ? taken[x] : x];
-		        		taken[x] = --len;
-		    		}
-		    		return result;
-			}
-			var randomClass = getRandom(classes,1);
-			return randomClass
-		}
+		// $scope.randomClass = function() {
+		// 	console.log("random class works")
+		// 	var classes = [
+		// 	"up", "upabit", "down", "downabit", "higher", "lower", "leftabit", "rightabit"]; 
+		// 	function getRandom(arr, n) {
+		//     	var result = new Array(n),		    
+		//     	    len = arr.length,		
+		//     	    taken = new Array(len);
+		//     		if (n > len)
+		//         		throw new RangeError("getRandom: more elements taken than available");
+		//     		while (n--) {
+		//         		var x = Math.floor(Math.random() * len);
+		//         		result[n] = arr[x in taken ? taken[x] : x];
+		//         		taken[x] = --len;
+		//     		}
+		//     		return result;
+		// 	}
+		// 	var randomClass = getRandom(classes,1);
+		// 	return randomClass
+		// }
 
 		$scope.save = function() {
   			console.log("Saving poem")  			

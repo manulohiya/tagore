@@ -15,6 +15,8 @@ angular.module('tagoreApp', ['ngRoute', 'tagoreApp.controllers', 'tagoreApp.dire
             })
             .otherwise({
                 redirectTo: '/'
-            });
+            })
 
 }])
+
+;
