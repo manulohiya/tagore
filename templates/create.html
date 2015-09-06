@@ -1,22 +1,24 @@
 <div ng-controller="CreateCtrl">
 	<div class = "col-sm-12 create">
 		<h1> Be a poet! </h1>
+
 		
+		
+		 <button class="btn btn-primary" type="button" ng-click="refresh(40)" value="Refresh">Refresh words</button> 
+
 		<div class="container" >
 		    <p>		    	
-		       	<span ng-repeat = "word in list1" class="higher" data-drag="true" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable="{animate:true}" ng-hide="!word.title">{{word.title}}</span>
+		       	<span my-draggable ng-repeat = "word in list1" class="higher" data-drag="true" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable="{animate:false}" ng-hide="!word">{{word}}</span>
 
-		    	
-		  
 		    </p>
 		</div>
 
-		  
+		
 		    
 		<div class = "thumbnail" data-drop="true" data-jqyoui-options ng-model = "list2" jqyoui-droppable>
 
 			<p>
-				<span ng-repeat = "word in list2" class="higher" data-drag="false" data-jqyoui-options ng-model="word" jqyoui-draggable ng-hide="!word.title">{{word.title}}
+				<span my-draggable ng-repeat = "word in list2" class="higher" data-drag="false" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable ng-hide="!word">{{word}}
 				</span>
 			</p>
 			
@@ -24,16 +26,5 @@
 
 		<button class="btn btn-primary" type="button" ng-click="save()" value="Save">Save</button>
 
-	
-		<!-- <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style='height:50px;'>
-			  <div class="btn btn-success" data-drag="false" data-jqyoui-options ng-model="list2" jqyoui-draggable ng-hide="!list2.title">{{list2.title}}</div>
-		</div> -->
-
-  			
-  		  
-
-
-
-	  	<!-- <canvas width="1000" height="600"></canvas> -->
 	</div>  	
   </div>

@@ -35,17 +35,19 @@ p {
 p span {
   line-height: 1;
   display: inline-block;
-  margin: 0 4px 8px 0;
+  margin: 4px 4px 8px 20px;
   background-color: #efefef;
-  padding: .4em;
+  padding: 4px;
   -webkit-box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 1);
   -moz-box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 1);
   box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 1);
+
 }
 
 .small {
   padding: .4em .25em;
   margin-right: 2px;
+
 }
 
 .punct {
@@ -110,8 +112,8 @@ p span {
 /* Canvas */
 .thumbnail {
 	/*width: 100%;*/
-	height: 400px!important; 
-	width: 800px!important;
+	height: 450px!important; 
+	width: 750px!important;
 	
 	background-image: url('/bluetexture.png'); 
 	  display: block;
