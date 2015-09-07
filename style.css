@@ -34,7 +34,7 @@ p {
 }
 
 p span {
-  line-height: 2;
+  line-height: 1;
   display: inline-block;
   margin: 4px 4px 8px 20px;
   background-color: #efefef;
@@ -116,6 +116,8 @@ p span {
   height: 500px;
 	/*background-image: url('/bluetexture.png'); */
   margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 	  
 
 }
@@ -124,5 +126,6 @@ button {
 	display: block;
     margin: 0 auto;
 	text-align: center;
+
 }
 

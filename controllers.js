@@ -21,12 +21,14 @@ angular.module('tagoreApp.controllers', ['tagoreApp.services', 'tagoreApp.direct
 		var imageUrl;
 		var backgroundColors =["#1abc9c", "#2ecc71", "#3498db", "#9b59b6","#16a085","#27ae60","#2980b9","#8e44ad","#e67e22", "#f39c12","#e74c3c","#c0392b"];
 
-		var randomColor = backgroundColors[Math.floor(Math.random()*backgroundColors.length)]
+		var randomColor = backgroundColors[Math.floor(Math.random()*backgroundColors.length)];
 		console.log(randomColor)
 		 $(".fridge").css('background-color', randomColor);
 
-		 
-		
+		var classes =["up", "upabit", "down", "downabit","higher","lower","leftabit","rightabit"]; 
+		var magnets = [];
+		magnets = $("p")
+		console.log(magnets)
 
 
 

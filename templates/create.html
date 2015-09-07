@@ -4,7 +4,7 @@
 
 		<div class="container col-sm-4" >
 		   
-			    <p>		    	
+			    <p class = "words">		    	
 			       	<span my-draggable ng-repeat = "word in list1 track by $index" class ="higher" data-drag="true" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable="{animate:false}" ng-hide="!word">{{word}}</span>
 
 			    </p>
@@ -14,16 +14,17 @@
 		
 		
 				    
-		<div class = "fridge col-sm-8" data-drop="true" data-jqyoui-options ng-model = "list2" jqyoui-droppable>
+		<div class = "fridge col-sm-6" data-drop="true" data-jqyoui-options ng-model = "list2" jqyoui-droppable>
 
 			<p>
-				<span my-draggable ng-repeat = "word in list2 track by $index" class="higher" data-drag="false" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable ng-hide="!word">{{word}}
+				<span my-draggable ng-repeat = "word in list2 track by $index"  data-drag="false" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable ng-hide="!word">{{word}}
 				</span>
 			</p>
 			
 		</div>
-
-		<button class="btn btn-primary" type="button" ng-click="save()" value="Save">Save</button>
+		
+			<button class="btn btn-primary" type="button" ng-click="save()" value="Save">Save</button>
+			
 		
 	</div>
 </div> 
