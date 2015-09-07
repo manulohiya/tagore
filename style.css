@@ -24,16 +24,17 @@ h1 {
 /* Magnets */
 
 .container {
-  width: 75%;
+  /*width: 75%;*/
   margin: 2em auto;
 }
 
 p {
+  font-size: 24px!important
   margin-bottom: 24px
 }
 
 p span {
-  line-height: 1;
+  line-height: 2;
   display: inline-block;
   margin: 4px 4px 8px 20px;
   background-color: #efefef;
@@ -110,14 +111,12 @@ p span {
 }
 
 /* Canvas */
-.thumbnail {
-	/*width: 100%;*/
-	height: 600px!important; 
-	width: 900px!important;
-	
-	background-image: url('/bluetexture.png'); 
-	  display: block;
-    margin: 0 auto;
+.fridge {
+  /*padding-left: 50px;*/
+  height: 500px;
+	/*background-image: url('/bluetexture.png'); */
+  margin-top: 20px;
+	  
 
 }
 

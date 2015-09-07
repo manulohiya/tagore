@@ -43,27 +43,17 @@ angular.module('tagoreApp.services', ['ui.bootstrap', 'ngDragDrop'])
 
 		var topWords = ["the","be","and","of","a","in","to","have","it","I","that","for","you","he","with","on","do","say","this","they","at","but","we","his","from","that","not","n't","n't","by","she","or","as","what","go","their","can","who","get","if","would","her","all","my","make","about","know","will","as","up","one","time","there","year","so","think","when","which","them","some","me","people","take","out","into","just","see","him","your","come","could","now","than","like","other","how","then","its","our","two","more","these","want","way","look","first","also","new","because","day","more","use","no","man","find","here","thing","give","many","well","only","those","tell","one","very","her","even","back","any","good","woman","through","us","life","child","there","work","down","may","after","should","call","world","over","school","still","try","in","as","last","ask","need","too","feel","three","when","state","never","become","between","high","really","something","most","another","much","family","own","out","leave","put","old","while","mean","on","keep","student","why","let","great","same","big","group","begin","seem","country","help","talk","where","turn","problem","every","start","hand","might","American","show","part","about","against","place","over","such","again","few","case","most","week","company","where","system","each","right","program","hear","so","question","during","work","play"];
 
-		var verbs = ["be","have","do","say","go","get","make","know","think","take","see","come","want","use","find","give","tell","work","call","try","ask","need","feel","become","leave","were","had","did","said","went","got","made","knew","thought","took","saw","came","wanted","used","found","gave","told","worked","called","tried","asked","needed","felt","became","left","been","had","done","said","gone","got/gotten","made","known","thought","taken","seen","come","wanted","used","found","given","told","worked","called","tried","asked","needed","felt","become","left"]
-		
+		var verbs = ["be","have","do","say","go","get","make","know","think","take","see","come","want","use","find","give","tell","work","call","try","ask","need","feel","become","leave","were","had","did","said","went","got","made","knew","thought","took","saw","came","wanted","used","found","gave","told","worked","called","tried","asked","needed","felt","became","left","been","had","done","said","gone","got","gotten","made","known","thought","taken","seen","come","wanted","used","found","given","told","worked","called","tried","asked","needed","felt","become","left"];
 
-		console.log(topWords)
-		var hipsterPunctuationLess = hipsterIpsum[0].replace(/[.,\/!%\^&\*;:{}=\_`~()]/g,"");
-		var hipsterPunctuationLessString = hipsterPunctuationLess.replace(/\s{2,}/g," ");
-		console.log("punctuationLessString: "+hipsterPunctuationLessString)
-		var hipsterLowerCase = hipsterPunctuationLessString.toLowerCase();
-		console.log("lowercaseString: "+hipsterLowerCase)
-		
-		var hipsterAllWords = hipsterLowerCase.split(' ');
+		var pronouns = ["your","they","their","we","who","them","its","our","my","those","he","us","her","something","me","yourself","someone","everything","itself","everyone","themselves","anyone","him","whose","myself","everybody","ourselves","himself","somebody","yours","herself","whoever","you","that","it","this","what","which","these","his","she","lot","anything","whatever","nobody","none","mine","anybody","some","there","all","where","another","same","certain","nothing","self","nowhere"];
 
-		var inputWords = hipsterAllWords.concat(topWords, verbs); 
-		console.log(inputWords)
+		var suffixes = ["s","en","s","ed","en","ing","er","est","ation","sion","er","cian","ess","ness","al","ary","ment","y","al","ary","able","ly","y","ful","ly","ize","ate"];
+		
+		var hipster = hipsterIpsum[0].replace(/[.,\/!%\^&\*;:{}=\_`~()]/g,"").toLowerCase().split(' ');
+		console.log(hipster);
 		var words = [];
-		$.each(inputWords, function(i, el){
-    		if($.inArray(el, words) === -1) 
-    			words.push(el);
-		});
-
-		console.log(words);
+		words = hipster.concat(topWords, verbs, pronouns, suffixes); 
+		// console.log(words);
 		
 
 	return {
@@ -88,10 +78,22 @@ angular.module('tagoreApp.services', ['ui.bootstrap', 'ngDragDrop'])
 		    		}
 		    		return result;
 			}
-			var randomWords = getRandom(words,number)
+			// Get random words from each category
+			var wordTypes = 5
+			var randomHipster = getRandom(hipster, number/wordTypes);
+			var randomVerb = getRandom(verbs, number/wordTypes);
+			var randomPronoun = getRandom(pronouns, number/wordTypes);
+			var randomSuffix = getRandom(suffixes, number/wordTypes);
+			var randomTopWords = getRandom(topWords, number/wordTypes);
+
+
+			var randomWords = randomPronoun.concat(randomVerb,randomTopWords,randomHipster,randomSuffix);
 			console.log(randomWords)
 			return randomWords
-	    },	    post: function(word){
+
+	    },	   
+
+	     post: function(word){
 	    words.push(word);
 	    }
 	  };

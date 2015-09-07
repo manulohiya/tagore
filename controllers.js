@@ -11,12 +11,25 @@ angular.module('tagoreApp.controllers', ['tagoreApp.services', 'tagoreApp.direct
 		console.log('poems create controller working')
 		console.log('words create controller working')
 				
+		
+
 		var numberWords = 40;
 		$scope.list1 = WordService.get(numberWords);
   		$scope.list2 = [];
   		$scope.poem = {};
   		$scope.poems = PoemService.all();
 		var imageUrl;
+		var backgroundColors =["#1abc9c", "#2ecc71", "#3498db", "#9b59b6","#16a085","#27ae60","#2980b9","#8e44ad","#e67e22", "#f39c12","#e74c3c","#c0392b"];
+
+		var randomColor = backgroundColors[Math.floor(Math.random()*backgroundColors.length)]
+		console.log(randomColor)
+		 $(".fridge").css('background-color', randomColor);
+
+		 
+		
+
+
+
 
 		$scope.refresh = function(numberWords) {
 			console.log("refresh works")
@@ -26,30 +39,9 @@ angular.module('tagoreApp.controllers', ['tagoreApp.services', 'tagoreApp.direct
 			return $scope.list1
 		}
 
-		// $scope.randomClass = function() {
-		// 	console.log("random class works")
-		// 	var classes = [
-		// 	"up", "upabit", "down", "downabit", "higher", "lower", "leftabit", "rightabit"]; 
-		// 	function getRandom(arr, n) {
-		//     	var result = new Array(n),		    
-		//     	    len = arr.length,		
-		//     	    taken = new Array(len);
-		//     		if (n > len)
-		//         		throw new RangeError("getRandom: more elements taken than available");
-		//     		while (n--) {
-		//         		var x = Math.floor(Math.random() * len);
-		//         		result[n] = arr[x in taken ? taken[x] : x];
-		//         		taken[x] = --len;
-		//     		}
-		//     		return result;
-		// 	}
-		// 	var randomClass = getRandom(classes,1);
-		// 	return randomClass
-		// }
-
 		$scope.save = function() {
   			console.log("Saving poem")  			
-			var can = document.getElementsByClassName("thumbnail")
+			var can = document.getElementsByClassName("fridge")
 			html2canvas(can, {
   					onrendered: function(canvas) {
     				imageUrl = canvas.toDataURL("image/png");
@@ -60,19 +52,14 @@ angular.module('tagoreApp.controllers', ['tagoreApp.services', 'tagoreApp.direct
   						$scope.poem.popularity = 0;
   						$scope.poem.author = 'Manu';
   						
-  						$scope.poems.push($scope.poem);
-    				
-    				}    				
+  						$scope.poems.push($scope.poem);   			
+    				}   					
     		})
-    					
-  						  
-
-  					
-			
+  						
 			
 		}
 			
-			 				
+		 				
 
 	}])
 	;
