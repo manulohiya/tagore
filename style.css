@@ -25,7 +25,7 @@ h1 {
 
 .container {
   /*width: 75%;*/
-  margin: 2em auto;
+  /*margin: 2em auto;*/
 }
 
 p {
@@ -42,8 +42,32 @@ p span {
   -webkit-box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 1);
   -moz-box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 1);
   box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 1);
+  cursor: pointer;
+}
+
+.words {
+  margin-top: 10%;
+  font-size: 28px;
 
 }
+
+.words2 {
+  margin-top: 10%;
+   margin-left: 20%;
+    font-size: 28px;
+}
+
+/*p span::after {
+  content: "";
+  background-color: blue;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+}*/
 
 .small {
   padding: .4em .25em;
@@ -114,12 +138,20 @@ p span {
 .fridge {
   /*padding-left: 50px;*/
   height: 500px;
-	/*background-image: url('/bluetexture.png'); */
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-	  
+  opacity: 0.9;
+  margin: 20px; 
+}
 
+.fridge::after {
+  content: "";
+  background: url(/texture.jpg);
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
 }
 
 button {
@@ -127,5 +159,9 @@ button {
     margin: 0 auto;
 	text-align: center;
 
+}
+
+.addToDbbtn {
+  margin-top: 20px;
 }
 

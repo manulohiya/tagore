@@ -4,10 +4,10 @@
 
 		<h1> Poetry in Motion </h1>
 			
-		<div class = "poemcard" ng-repeat = "poem in poems | orderBy:'-poemId'"">	
-				{{poem.poemId}}
-				{{poem.date_created}}
-				<img class = "photo" ng-src="{{poem.image}}" alt="Description"/>
+		<div class = "poemcard" ng-repeat = "poem in poems | orderBy:'-poemId' track by $index">	
+				{{poem.author}}
+				
+				<img class = "img-responsive photo" ng-src="{{poem.image}}" alt="Description"/>
 			
 		</div>
 	</div>
