@@ -2,12 +2,13 @@
 
 	<div class = "col-sm-6 col-sm-offset-3">
 
-		<h1> Poetry in Motion </h1>
+		<h1> All Poems </h1>
+		
 			
 		<div class = "poemcard" ng-repeat = "poem in poems | orderBy:'-poemId' track by $index">	
-				{{poem.author}}
-				
+				 				
 				<img class = "img-responsive photo" ng-src="{{poem.image}}" alt="Description"/>
+				Submitted by {{poem.author}} on {{poem.date_created | date:'MM/dd/yyyy'}}
 			
 		</div>
 	</div>

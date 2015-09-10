@@ -3,18 +3,18 @@ angular.module('tagoreApp', ['ngRoute', 'tagoreApp.controllers', 'tagoreApp.dire
 .config(['$routeProvider',
    function ($routeProvider) {
         $routeProvider
-        .when('/', {
-                templateUrl: 'templates/home.html',
+        .when('/feed', {
+                templateUrl: 'templates/feed.html',
                 conroller: 'PoemsCtrl'
                
             })
          $routeProvider
-        .when('/create', {
+        .when('/', {
                 templateUrl: 'templates/create.html',
                 conroller: 'CreateCtrl'
             })
         $routeProvider
-        .when('/create', {
+        .when('/', {
                 templateUrl: 'templates/create.html',
                 conroller: 'SaveCtrl'
             })

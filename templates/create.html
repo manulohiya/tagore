@@ -1,11 +1,11 @@
 <div ng-controller="CreateCtrl">
 	<div class = "col-sm-12 create">
-		<h1> Be a poet! </h1>
-
+		<h1> Write a poem! </h1>
+		
 		<div class="container col-sm-3" ng-model = "list1">
 			
 			<p class = "words col-sm-12">		    	
-				<span ng-repeat = "word in list1 track by $index" ng-class-odd="'up'" ng-class-even="'down'" data-drag="true" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable="{animate:false}" ng-hide="!word" ng-if="word"> {{word}}</span>
+				<span class = "animated rollIn" ng-repeat = "word in list1 track by $index" ng-class-odd="'up'" ng-class-even="'down'" data-drag="true" data-jqyoui-options="{revert: 'false'}" ng-model="word" jqyoui-draggable="{animate:false}" ng-hide="!word" ng-if="word"> {{word}}</span>
 
 			</p>
 			
@@ -27,11 +27,16 @@
 	</div>
 </div> 
 
+<div ng-controller="SaveCtrl">
+	 
 
-<div class = "col-sm-offset-5 col-sm-7" ng-controller="SaveCtrl">
-      
+
+	
+	<div class = "col-sm-8 col-sm-offset-4">
+       <h4> Poet Name <input type="text" ng-model="name"> </input>  </h4>
       <button ng-click="addImage()" class = "addToDbbtn btn-primary col-sm-4 col-sm-offset-1">Save Poem</button>
    
+	</div>
 </div>
 
 
